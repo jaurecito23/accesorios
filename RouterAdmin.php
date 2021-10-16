@@ -5,7 +5,7 @@ namespace MVC;
 
 // Para conectar el index con sus respectivos controladores
 
-class Router
+class RouterAdmin
 {
 
     public $rutasGET = [];
@@ -110,13 +110,13 @@ class Router
 
         ob_start();
 
-        include __DIR__ . "/views/$view.php";
+        include __DIR__ . "/admin/templates/$view.php";
 
         // Get_clean Limpiamos la memoria $contenido almacena la view que le pasamos
 
         $contenido = \ob_get_clean();
 
-        include __DIR__ . "/views/layout/layout.php";
+        include __DIR__ . "/admin/templates/layout/layout.php";
 
     }
 
